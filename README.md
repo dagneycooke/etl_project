@@ -8,7 +8,7 @@
 ## Before you clone this repository
 Add "AllMoviesDetailsCleaned.csv" from the Kaggle site for [350 000+ movies](https://www.kaggle.com/stephanerappeneau/350-000-movies-from-themoviedborg#AllMoviesDetailsCleaned.csv). 
 
-OR You can access this file also at this [Google Drive](https://drive.google.com/drive/folders/1oxaFbyAWkC3LX9S5jFebvk79Q7vLa6ek).
+OR you can access this file also at this [Google Drive](https://drive.google.com/drive/folders/1oxaFbyAWkC3LX9S5jFebvk79Q7vLa6ek).
 
 ## Data Sources
 * [Golden Globe Awards](https://www.kaggle.com/unanimad/golden-globe-awards)
@@ -18,16 +18,16 @@ OR You can access this file also at this [Google Drive](https://drive.google.com
 We wanted to create a data source to enable analyses on movies and "best-picture" Golden Globe awards (and nomiations) over 20 years (1997 to 2016). We chose an end date of 2016 because our movies data contained complete data upto the year 2016.
 
 The final data table includes the following columns:
-* title (string) - title of film
-* genres (string) - genre of film
-* release_year (int) - year that film was released
-* nom_category (string) - nomination category (NaN if film was not nominated)
-* nom_year (int) - year film was nominated (NaN if film was not nominated)
-* win (boolean) - whether or not film won the nomination (NaN if film was not nominated)
-* popularity (float) - popularity score
-* budget (float) - budget for film (NaN if information is not available)
-* revenue (float) - revenue for film (NaN if information is not available)
-* profit (float) - profit for film (NaN if budget or revenue information is not available)
+* title - title of film
+* genres - genre of film
+* release_year - year that film was released
+* nom_category - nomination category (NaN if film was not nominated)
+* nom_year - year film was nominated (NaN if film was not nominated)
+* win - whether or not film won the nomination (NaN if film was not nominated)
+* popularity - popularity score
+* budget - budget for film (NaN if information is not available)
+* revenue - revenue for film (NaN if information is not available)
+* profit - profit for film (NaN if budget or revenue information is not available)
 
 ## Extract
 
@@ -39,6 +39,7 @@ In both these files, we removed columns we were not interested in for.
 
 
 **Golden Globes Extracted Columns**
+
 We were interested in the following columns for the Golden Globes data: 
 * year_film - year that film was released
 * year_award - year film was nominated
@@ -52,6 +53,7 @@ We dropped the following column:
 
 
 **Movies Extracted Columns**
+
 The movie column had many columns that we did not need. We kept the following columns:
 * budget - budget for film 
 * genres - genre of film
