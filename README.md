@@ -67,10 +67,10 @@ We dropped the following columns for our analysis because they were not relevant
 2. We were interested in the removed the years that were released before or after our time frame (1997 to 2016).
 
 3. We created a new column to contain "santized" film titles. Since it would be one of the columns we would merge on, we wanted to maximize our chances of consistency between the two data bases.
- * Titles were all converted to lowercase and any leading “The” was dropped (The Song of Bernadette --> song of bernadette). Several films also had a trailing “The” (ie “Robe, The”) which we removed as well.  These “The”s were stripped based on being the first four characters of the string or the last five characters of the string in order to avoid stripping any internal “The”s from any other movie titles.  We chose to get rid of any leading “The”s instead of moving a trailing “, The” to the front in case any movie that should have had a leading “The” didn’t for safety.
- * Similar process was deployed for ", A" and ", An".
- *  We also cleared the data for periods ("."), spaces (" "), and dashes ("-").
- * Column titles were also edited for consistency, converting them to lowercase and replacing spaces with underscores as needed.
+    * Titles were all converted to lowercase and any leading “The” was dropped (The Song of Bernadette --> song of bernadette). Several films also had a trailing “The” (ie “Robe, The”) which we removed as well.  These “The”s were stripped based on being the first four characters of the string or the last five characters of the string in order to avoid stripping any internal “The”s from any other movie titles.  We chose to get rid of any leading “The”s instead of moving a trailing “, The” to the front in case any movie that should have had a leading “The” didn’t for safety.
+    * Similar process was deployed for ", A" and ", An".
+    *  We also cleared the data for periods ("."), spaces (" "), and dashes ("-").
+    * Column titles were also edited for consistency, converting them to lowercase and replacing spaces with underscores as needed.
 
 **Cleaning Movie DataFrame**
 
@@ -79,9 +79,9 @@ We dropped the following columns for our analysis because they were not relevant
 2. We extracted "release_year" from the "release_date", and removed the years that were released before or after our time frame (1997 to 2016).
 
 3. We created a new column to contain "santized" film titles. Since it would be one of the columns we would merge on, we wanted to maximize our chances of consistency between the two data bases.
- * Titles were all converted to lowercase and any leading “The” was dropped. Several films also had a trailing “, The” which we removed as well.  
- * Similar process was deployed for ", A" and ", An".
- * We also cleared the data for periods ("."), spaces (" "), and dashes ("-").
+    * Titles were all converted to lowercase and any leading “The” was dropped. Several films also had a trailing “, The” which we removed as well.  
+    * Similar process was deployed for ", A" and ", An".
+    * We also cleared the data for periods ("."), spaces (" "), and dashes ("-").
 
 4. We designated 0s in revenue and budget columns as NaNs so that we could add the "profit" column. The profit column returns "NaN" if either budget or revenue columns are "NaN".
 
