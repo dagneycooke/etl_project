@@ -1,9 +1,9 @@
 # ETL Project
 
 ## Team:
-Dagney Cooke
-Diana Silva
-Heain Yee
+* Dagney Cooke
+* Diana Silva
+* Heain Yee
 
 # Project Purpose
 We wanted to create a data source to enable analyses on movies and "best-picture" Golden Globe awards (and nomiations) over 20 years (1997 to 2016). We chose an end date of 2016 because our movies data contained complete data upto the year 2016.
