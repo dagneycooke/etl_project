@@ -38,6 +38,7 @@ Both of these files were read into pandas dataframes for cleaning, with the goal
 In both these files, we removed columns we were not interested in for.
 
 
+
 **Golden Globes Extracted Columns**
 
 We were interested in the following columns for the Golden Globes data: 
@@ -50,6 +51,7 @@ We were interested in the following columns for the Golden Globes data:
 
 We dropped the following column:
 * ceremony - Xth ceremony of nomination (int ranging 1 (first ceremony in 1944) to 77 (last ceremony in 2019))
+
 
 
 **Movies Extracted Columns**
