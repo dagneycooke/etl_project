@@ -5,7 +5,11 @@
 * Diana Silva
 * Heain Yee
 
-# Project Purpose
+## Before you clone this repository
+Add "AllMoviesDetailsCleaned.csv" from the Kaggle site for [350 000+ movies](https://www.kaggle.com/stephanerappeneau/350-000-movies-from-themoviedborg#AllMoviesDetailsCleaned.csv). 
+OR You can access this file also at this [Google Drive](https://drive.google.com/drive/folders/1oxaFbyAWkC3LX9S5jFebvk79Q7vLa6ek).
+
+## Project Purpose
 We wanted to create a data source to enable analyses on movies and "best-picture" Golden Globe awards (and nomiations) over 20 years (1997 to 2016). We chose an end date of 2016 because our movies data contained complete data upto the year 2016.
 
 The final data table includes the following columns:
@@ -24,11 +28,7 @@ The final data table includes the following columns:
 * [Golden Globe Awards](https://www.kaggle.com/unanimad/golden-globe-awards)
 * [350 000+ movies](https://www.kaggle.com/stephanerappeneau/350-000-movies-from-themoviedborg#AllMoviesDetailsCleaned.csv)
 
-## Before you Clone This Repository
-Add "AllMoviesDetailsCleaned.csv" from the Kaggle site for [350 000+ movies](https://www.kaggle.com/stephanerappeneau/350-000-movies-from-themoviedborg#AllMoviesDetailsCleaned.csv). 
-OR You can access this file also at this [Google Drive](https://drive.google.com/drive/folders/1oxaFbyAWkC3LX9S5jFebvk79Q7vLa6ek).
-
-### Extract
+## Extract
 
 We found two data sources from Kaggle.  The first one was a CSV file of all Golden Globe nominees and winners from 1944 - 2020.  Our second source had multiple csv files related to 350,000 movies, and we chose to use their AllMoviesCleaned.csv file, which was pulled from themoviedb.org (it covers all movies until AUG17  - ~350k movies).  
 
@@ -58,7 +58,7 @@ The movie column had many columns that we did not need. We kept the following co
 
 We dropped the following columns for our analysis because they were not relevant to the scope of our topic: 'id', 'imdb_id', 'original_language', 'overview', 'production_companies', 'production_countries', 'runtime', 'spoken_languages', 'status', 'tagline', 'vote_average', 'vote_count', 'production_companies_number', 'production_countries_number', 'spoken_languages_number', 'original_title'.
 
-### Transform
+## Transform
 
 **Cleaning Golden Globes DataFrame**
 
@@ -120,7 +120,7 @@ We use an interative merge strategy to combine the two data frames. We use two c
     * revenue (float) - revenue for film (NaN if information is not available)
     * profit (float) - profit for film (NaN if budget or revenue information is not available)
 
-### Load
+## Load
 We created an engine to export our database to a sql database file. We thought it would be the best solution to loading our dataframe because:
 * We were able to load the dataframe to a database without having to narrowly define the variety of datatypes we had in our columns.
 * Although we inteded to make title and release_year our primary keys, we could not do so. We wanted to include the universe of all movies in our data sources between the years of 1997 to 2016 (hence the outer-merge). Unfortunately, the movies did not perfectly match to each other- there were two items from Golden Globes that did not match to the movies data base. We were able to load the data to this database without running into issues with primary keys. Our recommendation for those who use this data base is to utilize a serial primary key.
