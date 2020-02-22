@@ -1,6 +1,6 @@
 # ETL Project
 
-## Team:
+## Team
 * Dagney Cooke
 * Diana Silva
 * Heain Yee
@@ -8,6 +8,10 @@
 ## Before you clone this repository
 Add "AllMoviesDetailsCleaned.csv" from the Kaggle site for [350 000+ movies](https://www.kaggle.com/stephanerappeneau/350-000-movies-from-themoviedborg#AllMoviesDetailsCleaned.csv). 
 OR You can access this file also at this [Google Drive](https://drive.google.com/drive/folders/1oxaFbyAWkC3LX9S5jFebvk79Q7vLa6ek).
+
+## Data Sources
+* [Golden Globe Awards](https://www.kaggle.com/unanimad/golden-globe-awards)
+* [350 000+ movies](https://www.kaggle.com/stephanerappeneau/350-000-movies-from-themoviedborg#AllMoviesDetailsCleaned.csv)
 
 ## Project Purpose
 We wanted to create a data source to enable analyses on movies and "best-picture" Golden Globe awards (and nomiations) over 20 years (1997 to 2016). We chose an end date of 2016 because our movies data contained complete data upto the year 2016.
@@ -23,10 +27,6 @@ The final data table includes the following columns:
 * budget (float) - budget for film (NaN if information is not available)
 * revenue (float) - revenue for film (NaN if information is not available)
 * profit (float) - profit for film (NaN if budget or revenue information is not available)
-
-## Data Sources
-* [Golden Globe Awards](https://www.kaggle.com/unanimad/golden-globe-awards)
-* [350 000+ movies](https://www.kaggle.com/stephanerappeneau/350-000-movies-from-themoviedborg#AllMoviesDetailsCleaned.csv)
 
 ## Extract
 
