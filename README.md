@@ -7,6 +7,7 @@
 
 ## Before you clone this repository
 Add "AllMoviesDetailsCleaned.csv" from the Kaggle site for [350 000+ movies](https://www.kaggle.com/stephanerappeneau/350-000-movies-from-themoviedborg#AllMoviesDetailsCleaned.csv). 
+
 OR You can access this file also at this [Google Drive](https://drive.google.com/drive/folders/1oxaFbyAWkC3LX9S5jFebvk79Q7vLa6ek).
 
 ## Data Sources
@@ -35,6 +36,8 @@ We found two data sources from Kaggle.  The first one was a CSV file of all Gold
 Both of these files were read into pandas dataframes for cleaning, with the goal of being able to combine tables based on movie titles.
 
 In both these files, we removed columns we were not interested in for.
+
+
 **Golden Globes Extracted Columns**
 We were interested in the following columns for the Golden Globes data: 
 * year_film - year that film was released
@@ -46,6 +49,7 @@ We were interested in the following columns for the Golden Globes data:
 
 We dropped the following column:
 * ceremony - Xth ceremony of nomination (int ranging 1 (first ceremony in 1944) to 77 (last ceremony in 2019))
+
 
 **Movies Extracted Columns**
 The movie column had many columns that we did not need. We kept the following columns:
@@ -86,6 +90,7 @@ We dropped the following columns for our analysis because they were not relevant
 4. We designated 0s in revenue and budget columns as NaNs so that we could add the "profit" column. The profit column returns "NaN" if either budget or revenue columns are "NaN".
 
 **Merging Two DataFrames**
+
 We use an interative merge strategy to combine the two data frames. We use two columns from each table for the merge: the sanitized film title column and release year column. We use two columns because there are film titles with multiple release dates (e.g., "Carmen"). 
 
 * First Merge: We outer-merge the two data frames as whole, and extract 3 separate tables from this merge.
